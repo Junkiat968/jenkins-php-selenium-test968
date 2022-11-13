@@ -21,7 +21,7 @@ pipeline {
 					}
 					steps {
 						sh 'mvn -B -DskipTests clean package'
-						sh 'mvn test "localhost:80/index.php"'
+						sh 'mvn test "http://localhost:80/index.php"'
 					}
 					post {
 						always {
