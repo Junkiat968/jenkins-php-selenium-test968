@@ -21,7 +21,7 @@ pipeline {
 					}
 					steps {
 						sh 'mvn -B -DskipTests clean package'
-						sh 'mvn test "/var/jenkins_home/workspace/jenkins-php-selenium-test@2/jenkins-php-selenium-test/src/index.php"'
+						sh 'mvn test "/var/jenkins_home/workspace/jenkins-php-selenium-test@2/jenkins-php-selenium-test/src:/var/www/html"'
 					}
 					post {
 						always {
