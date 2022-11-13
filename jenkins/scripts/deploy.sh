@@ -6,6 +6,8 @@ set -x
 
 docker run -d -p 80:80 --name my-apache-php-app -v /home/raina/Desktop/jenkins-php-selenium-test/src:/var/www/html php:7.2-apache
 
+docker exec my-apache-php-app /bin/bash -c "chmod 777 ."
+
 sleep 1
 set +x
 
