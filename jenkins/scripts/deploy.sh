@@ -2,7 +2,8 @@
 
 set -x
 docker run -d -p 80:80 --name my-apache-php-app -v //mnt/c/Users/raina/Desktop/school/ICT3203/practical/jenkins-php-selenium-test/src:/var/www/html php:7.2-apache
-docker exec my-apache-php-app /bin/bash -c 'chmod -R 777 /var/www/html'
+docker exec my-apache-php-app /bin/bash -c 'sudo chmod -R 777 /var/www/html'
+docker exec my-apache-php-app /bin/bash -c 'echo "hello"'
 docker exec my-apache-php-app /bin/bash -c 'curl http://localhost:80'
 sleep 1
 set +x
