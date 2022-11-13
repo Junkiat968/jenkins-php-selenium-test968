@@ -7,9 +7,9 @@ pipeline {
 					agent any
 					steps {
 						sh "chmod +x -R ${env.WORKSPACE}"
-						sh 'deploy.sh'
+						sh './jenkins/scripts/deploy.sh'
 						input message: 'Finished using the web site? (Click "Proceed" to continue)'
-						sh 'kill.sh'
+						sh './jenkins/scripts/kill.sh'
 					}
 				}
 				stage('Headless Browser Test') {
