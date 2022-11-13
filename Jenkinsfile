@@ -8,7 +8,7 @@ pipeline {
 					steps {
 						sh "chmod +x -R ${env.WORKSPACE}"
 						dos2unix 'deploy.sh'
-						sh 'deploy.sh'
+						//sh 'deploy.sh'
 						input message: 'Finished using the web site? (Click "Proceed" to continue)'
 						sh 'kill.sh'
 					}
