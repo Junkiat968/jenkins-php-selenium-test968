@@ -3,7 +3,8 @@
 set -x
 pwd
 git clone https://github.com/rainyraina/jenkins-php-selenium-test.git
-docker run -d -p 80:80 --name my-apache-php-app -v https://github.com/rainyraina/jenkins-php-selenium-test/tree/master/src:/var/www/html php:7.2-apache
+ls
+docker run -d -p 80:80 --name my-apache-php-app -v jenkins-php-selenium-test/src:/var/www/html php:7.2-apache
 #docker exec my-apache-php-app /bin/bash -c 'chmod 777 /var/www/html/index.php'
 docker exec my-apache-php-app /bin/bash -c 'pwd'
 docker exec my-apache-php-app /bin/bash -c 'ls'
